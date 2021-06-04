@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width =dvice-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>猪岡泰成の自己PR</title>
+    <style type="text/css">
+    html{
+        scroll-behavior: smooth;
+    }
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            overflow-x: hidden;
+            background-color: rgb(219, 219, 219);
+        }
+
+        /*ページトップ装飾div*/
+
+        .top {
+            background-image: url("img/top0.png");
+            width: 100%;
+            height: 81px;
+            top: -31px;
+            position: fixed;
+            z-index: 5;
+        }
+
+        .logo {
+            /*サイトタイトルロゴ画像*/
+            background-image: url("img/logo.png");
+            width: 250px;
+            height: 120px;
+            background-size: 80%;
+            position: absolute;
+            right: 0;
+            top: 31px;
+            background-repeat: no-repeat;
+            z-index: 6;
+            box-sizing: border-box;
+            padding: 8px;
+        }
+
+        /*サイドメニューdiv*/
+
+        #menu {
+            background-image: url(img/menu2.png);
+            position: fixed;
+            bottom: 0;
+            left: -150px;
+            width: 200px;
+            min-height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 4;
+            box-sizing: border-box;
+            transition: .6s;
+
+        }
+
+        #b01 {
+            background-image: url("img/button.png");
+            width: 100px;
+            height: 100px;
+            background-size: 80%;
+            position: absolute;
+            left: 5%;
+            bottom: 40%;
+            background-repeat: no-repeat;
+            z-index: 5;
+            box-sizing: border-box;
+            font-style: italic;
+            font-size: 120%;
+            color: grey;
+        }
+
+        #b02 {
+            background-image: url("img/button.png");
+            width: 100px;
+            height: 100px;
+            background-size: 80%;
+            position: absolute;
+            left: 5%;
+            bottom: 26%;
+            background-repeat: no-repeat;
+            z-index: 5;
+            box-sizing: border-box;
+            font-style: italic;
+            font-size: 120%;
+            color: grey;
+        }
+
+        #b03 {
+            background-image: url("img/button.png");
+            width: 100px;
+            height: 100px;
+            background-size: 80%;
+            position: absolute;
+            left: 5%;
+            bottom: 12%;
+            background-repeat: no-repeat;
+            z-index: 5;
+            box-sizing: border-box;
+            font-style: italic;
+            font-size: 120%;
+            color: grey;
+        }
+
+        /*コンテンツdiv*/
+
+        #c01 {
+            background-image: url("img/c01.png");
+            position: relative;
+            background-size: cover;
+            right: 0%;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transition: .4s;
+        }
+
+        #c02 {
+            background-image: url("img/c02.png");
+            position: relative;
+            background-size: cover;
+            right: -1%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transition: .4s;
+        }
+
+        #c03 {
+            background-image: url("img/c03.png");
+            position: relative;
+            background-size: cover;
+            right: 0%;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            z-index: 1;
+            transition: .4s;
+        }
+
+        /*コンテンツカバーdiv*/
+
+        #c01c {
+            background-image: url("img/c01c.png");
+            position: relative;
+            /* 表示画像の高さ(1080) ÷ 表示画像の幅(1920) × 100 */
+            padding-top: 56.25%;
+            background-size: 90%;
+            right: 0;
+            top: 0;
+            background-repeat: no-repeat;
+            z-index: 3;
+            transition: .4s;
+        }
+
+        #c02c {
+            background-image: url("img/c02c.png");
+            position: relative;
+            padding-top: 56.25%;
+            background-size: 89.5%;
+            right: -10%;
+            background-repeat: no-repeat;
+            z-index: 3;
+            transition: .4s;
+        }
+
+        #c03c {
+            background-image: url("img/c03c.png");
+            position: relative;
+            padding-top: 56.25%;
+            background-size: 90%;
+            right: 0%;
+            top: 0;
+            background-repeat: no-repeat;
+            z-index: 3;
+            transition: .4s;
+        }
+
+        /*中身のテキスト用div*/
+
+        #t01 {
+            position: absolute;
+            color: grey;
+            z-index: 4;
+            bottom: 20%;
+            left: 45%;
+            font-size: 2vw;
+        }
+
+        #t02 {
+            position: absolute;
+            color: grey;
+            z-index: 4;
+            bottom: 20%;
+            left: 8%;
+            font-size: 2vw;
+        }
+
+        #tex01 {
+            position: absolute;
+            color: rgb(219, 219, 219);
+            z-index: 2;
+            bottom: 8%;
+            left: 32%;
+            font-size: 2vw;
+        }
+
+        /*コンテンツ開閉動作*/
+
+        #c01c.open {
+            right: 55%;
+        }
+
+        #c01.open {
+            right: -20%;
+        }
+
+        #c02c.open {
+            right: -65%;
+        }
+
+        #c02.open {
+            right: 10%;
+        }
+
+        #c03c.open {
+            right: 55%;
+        }
+
+        #c03.open {
+            right: -20%;
+        }
+
+        #menu.menu-open {
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="menu">
+        <nav>
+            <a href="#c01c">
+                <div id="b01"><br><br><br>PROFILE
+                </div>
+            </a>
+            <a href="#c02">
+            <div id="b02"><br><br><br>WORK</div>
+            </a>
+            <a href="#c03c">
+            <div id="b03"><br><br><br>HOBBY</div>
+            </a>
+        </nav>
+    </div>
+    <div class="top">
+        <div class="logo"></div>
+    </div>
+    <div id="c01">
+        <div id="tex01">大学在学時<br>
+            VR,AR等様々な技術に触れる<br>
+            VRHMDやKinect等を用いてコンテンツ開発した</div>
+        <div id="c01c">
+            <div id="t01">猪岡　泰成(22)<br>
+                東京工科大学メディア学部<br>
+                メディアコンテンツコース卒業</div>
+        </div>
+    </div>
+    <div id="c02">
+        <div id="tex01">この作品では工程管理(リーダー)兼<br>
+            エフェクトデザイナーとして携わった<br>
+            完成品は東京ゲームショウにて展示した</div>
+        <div id="c02c">
+            <div id="t02">高校・大学を通してゲーム制作を<br>
+                中心に工程管理・グラフィッカー<br>
+                プログラマーとして活動した</div>
+        </div>
+    </div>
+    <div id="c03">
+        <div id="tex01">現在制作中の作品<br>
+            完成後はVRCHATで展示予定<br>
+            自動車やロボット等機械を作ることが多い</div>
+        <div id="c03c">
+            <div id="t01">趣味はゲーム制作に関連して<br>
+                2D・3DCG、及び動画制作<br>
+                サイクリング等のアウトドアも好む</div>
+        </div>
+    </div>
+    <script>
+        'use strict'
+        //コンテンツ開閉(クリック)
+
+        const _contents = ["c01", "c02", "c03", "c01c", "c02c", "c03c"];
+        class ContentOpener {
+            constructor(x) {
+                this.x = x;
+            }
+
+            opener() {
+                for (let i = 0; i < _contents.length; i++) {
+                    if (i % 3 == this.x) {
+                        if (document.getElementById(_contents[i]).className == 'open') {
+                            document.getElementById(_contents[i]).className = '';
+                        } else {
+                            document.getElementById(_contents[i]).className = 'open';
+                        }
+                    } else {
+                        document.getElementById(_contents[i]).className = '';;
+                    }
+                }
+            }
+        }
+
+        const content01 = new ContentOpener(0);
+        const content02 = new ContentOpener(1);
+        const content03 = new ContentOpener(2);
+
+        document.getElementById(_contents[0]).addEventListener('click', () => {
+            content01.opener();
+        });
+        document.getElementById(_contents[1]).addEventListener('click', () => {
+            content02.opener();
+        });
+        document.getElementById(_contents[2]).addEventListener('click', () => {
+            content03.opener();
+        });
+
+        //メニュー開閉(マウスオーバー)
+        const menu = document.getElementById("menu");
+        const button01 = document.getElementById("b01");
+        const button02 = document.getElementById("b02");
+        const button03 = document.getElementById("b03");
+
+        menu.addEventListener('mouseover', () => {
+            menu.className = 'menu-open';
+        });
+        menu.addEventListener('mouseleave', () => {
+            menu.className = '';
+        });
+
+        button01.addEventListener('click', () => {
+            content01.opener();
+        });
+
+        button02.addEventListener('click', () => {
+            content02.opener();
+        });
+
+        button03.addEventListener('click', () => {
+            content03.opener();
+        });
+
+    </script>
+</body>
+
+</html>
